@@ -3,4 +3,5 @@
 *.py text eol=lf
 *.md text eol=lf
 *.tex text eol=lf
-*.csv text eol=lf
+# Preserve exact CSV bytes for frozen-input hash verification.
+*.csv -text

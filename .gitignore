@@ -14,6 +14,12 @@
 /archive/*
 !/archive/README.md
 !/archive/research-notes/
+# Original copies also exist in the current docs/ source collection.
+/archive/research-notes/ISBN_Publishing_Visibility_Annotated_Literature_Review.pdf
+/archive/research-notes/docs/FEE_HISTORY.md
+/archive/research-notes/docs/REFERENCES.md
+/archive/research-notes/docs/isbn_prices_batchA.csv
+/archive/research-notes/docs/isbn_prices_batchB.csv
 
 # Preserve blinding and avoid publishing completed human coding.
 /validation/DO_NOT_SHOW_CODERS_key.csv
