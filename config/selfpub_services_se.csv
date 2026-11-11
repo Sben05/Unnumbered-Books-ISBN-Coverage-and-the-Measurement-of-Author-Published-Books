@@ -1,0 +1,5 @@
+name_pattern,country_language,tier,evidence_url,scope,start_year,end_year,notes,sources,evidence_status
+\bbooks on demand\b|\bbod\b,international/German,platform,https://bod.se/bodfiles/SE-Storage/documents/Press-documents/Stark_tillvaext_i_foerfattar-_och_foerlagsverksamheten.pdf,main,1997,9999,BoD Sweden: platform for authors who publish themselves (BoD press release),,documented
+\bforfattares bokmaskin\b,Swedish,platform,,main,0,9999,"Forfattares Bokmaskin (FBM), Swedish author-run POD/print service; no terms page read",,documented_weak
+\bboksmart\b|\bpublit\b,Swedish,platform,,mixed,0,9999,Swedish self-publishing services named by the requester; no evidence read; sensitivity only,,candidate_no_evidence
+\bvulkan\b,Swedish,author_services,,mixed,0,9999,Vulkan (Stockholm): self-publishing/subsidy label named by requester; no evidence read; sensitivity only,,candidate_no_evidence

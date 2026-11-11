@@ -1,0 +1,32 @@
+# Local source archives and environments (about 61 GB of raw/intermediate data).
+/data/
+/output/
+/.venv/
+/.claude/
+/.codex/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Keep a small historical index/notes; old drafts, exports and backups stay local.
+/archive/*
+!/archive/README.md
+!/archive/research-notes/
+
+# Preserve blinding and avoid publishing completed human coding.
+/validation/DO_NOT_SHOW_CODERS_key.csv
+/validation/completed/
+
+# Generated caches and transient compiler files.
+__pycache__/
+*.py[cod]
+.DS_Store
+*.aux
+*.out
+*.log
+*.synctex.gz
+/results/compiled_text.txt
+/results/environment.json
+*.zip

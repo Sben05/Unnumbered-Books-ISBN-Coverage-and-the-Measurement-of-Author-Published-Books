@@ -1,0 +1,14 @@
+\begin{table}[htbp]\centering\small
+\caption{Assumed classification errors and pooled ISBN coverage}\label{tab:sensitivity}
+\begin{tabular}{p{.56\linewidth}rrr}\toprule
+Scenario & Pre (\%) & Post (\%) & Change (pp)\\\midrule
+Uncorrected & 58.5 & 51.3 & -7.2\\
+95\% precision, no omissions (uniform) & 58.5 & 51.3 & -7.2\\
+90\% precision, 0.1\% omissions (uniform) & 59.8 & 52.9 & -7.0\\
+90\% precision, 0.5\% omissions (uniform) & 64.2 & 57.9 & -6.3\\
+Post ISBN negatives: 0.1\% omissions only & 58.5 & 52.9 & -5.6\\
+Post ISBN negatives: 0.5\% omissions only & 58.5 & 58.3 & -0.2\\
+Post no-ISBN positives: 80\% precision only & 58.5 & 56.9 & -1.6\\
+\bottomrule\end{tabular}
+\notes{Illustrative assumptions, not estimated accuracy or confidence bounds. ``Uniform'' applies the stated precision and negative-record omission probabilities across periods and ISBN groups. In ``only'' rows, all other labels are assumed correct. Omission is the probability of a true author-published record among predicted negatives.}
+\end{table}

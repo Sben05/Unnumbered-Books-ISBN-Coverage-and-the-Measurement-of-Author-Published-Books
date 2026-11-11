@@ -1,0 +1,390 @@
+I read the bundle. Below is a deep explanation of what the results actually say, what they do **not** say, and where the PDF has inconsistencies/garbled tables you should fix before publishing.
+
+## Bottom line first
+
+The bundle has **one strong descriptive/event-timing result**, **one important measurement result**, and **several weak or null causal tests**:
+
+1. **Strongest:** New Zealand’s **author = publisher** share breaks upward around **2007** and ends far above the UK/US, consistent with free national ISBNs + POD/Amazon-era tools. But this is **not clean causal proof**.
+2. **Strong measurement point:** In paid-ISBN countries, the Amazon-era self-publishing boom sits mostly **outside national bibliographies**. National ISBN shares measure **use of the national agency/catalogue**, not total self-publishing.
+3. **Null/weak:** France vs Québec does **not** show a sustained break after France’s 2019 ISBN fee. Pre-2019 both were free, so the paid-vs-free test only exists post-2019, and the fee dose is small/unverified.
+4. **Does not hold cleanly:** The **combined** UK vs NZ comparison reverses sign because UK services (AuthorHouse/Xlibris) spike and then move their stated place to the US. The NZ-vs-UK AP advantage disappears once country trends are allowed.
+5. **Not validation:** “Amazon vs Bowker” is only **two Bowker points**, not a series; it is a plausibility check, not a validation.
+
+Also critical: **AP = “author = publisher,” not Amazon Publishing.** The PDF says this explicitly on page 4. Do not read `ap_share_all.png` as Amazon Publishing.
+
+---
+
+## 1. Definitions that govern every result
+
+These definitions determine whether the numbers mean anything:
+
+- **AP / author = publisher:** a personal author’s normalized name equals or is contained in the publisher string, including initials/surname variants, or the publisher says “the author / à compte d’auteur / auto-édition.” Corporate author = publisher is flagged separately as `corporate_self` and **not counted**.
+- **Self-published / combined:** AP **OR** a service imprint from `config/selfpub_services.csv` (AuthorHouse, Xlibris, CreateSpace, “Independently published,” Lulu, BoD, Édilivre, etc.).
+- **Denominator:** distinct valid **print ISBN-13s of catalogued books** in the national catalogue for that country/year. It is **not** “all ISBNs issued,” **not** new titles only, and **not** sales. It includes reprints, new editions, government publications, standards unless a sensitivity variant excludes them. Excludes ebooks/audio/music/maps/serials/microforms.
+- **Country attribution:** NZ via 008 country = nz; UK via publication-country links, Ireland/imports dropped; France via 102/place; Québec via place-name match; US LoC via 008/15–17 ending in “u.” Amazon has no country field.
+- **Year:** publication year from the record, not cataloguing year.
+- **Windows:** UK/NZ 1995–2014 (BNB 2015+ incomplete); France/Québec 2010–2021; US LoC 1995–2011; NZ break tests to 2019.
+
+So every “share” is **share of catalogued print ISBNs**, not share of books sold, authors, or ISBNs issued. That is the central limitation.
+
+---
+
+## 2. Background facts and design consequences
+
+- **NZ ISBNs:** free throughout; no charging period found.
+- **UK:** Nielsen charges throughout (current £93 single, £174 for 10, etc.); no clear price history collected; no clear upward trend.
+- **France:** ISBNs free until **8 March 2019**, then application fees began. Extra services stayed free.
+- **Québec:** free for eligible francophone Canadian publishers/self-publishers; start date not established.
+- **Legal deposit:** BnF/NZ/UK/Québec say self-published works are covered, but compliance is not measured.
+
+**Design consequence:** The “paid vs free” framing holds for **UK vs NZ** for the whole window. For **France vs Québec**, it only holds **from 2019**; 2010–2018 compares **two free regimes**. That is why France/Québec cannot test the fee hypothesis before 2019.
+
+---
+
+## 3. UK vs NZ results
+
+### What the figure/table shows
+`uk_nz_shares.png` is the **combined** share: AP OR service imprint.
+
+- **NZ:** rises from ~3.2% in 1995 to ~7.7% in 2007, ~13.6% in 2013, and ~16.2% in 2016. The rise is mostly **author = publisher**, not service imprints. NZ is smooth and not service-driven.
+- **UK:** starts ~0.7–0.9%, rises to ~4.1% in 2011, then falls to ~2.2% by 2014. That rise is **service-driven** (AuthorHouse/Xlibris/CreateSpace etc.), and the fall is largely a **place-of-publication effect**: AuthorHouse records move from Milton Keynes/UK-place to Bloomington, Indiana/US-place, so they fall out of the UK country filter even though the BNB still catalogues them. UK AP alone is flat: ~0.87% in 1995 → ~1.0% in 2013.
+
+So the UK combined series is a **lower bound on UK authors using services** after 2011, and the UK AP series is the steadier one.
+
+### Econometric results
+**M1 DiD / logit with year FE, year-clustered SEs:**
+
+- **NZ vs UK, AP, break 2007, no country trends:** OR **1.79** [1.54, 2.10] — NZ odds higher.
+- **With country trends:** OR **1.29**, p = **0.27** — **not significant**. So the NZ-vs-UK AP advantage is **not robust to pre-existing country trends**.
+- **NZ vs US LoC, AP, no trends:** OR **2.98** [2.32, 3.61]; with trends OR **2.12**, p = **0.002**. Stronger, but US LoC is a selected catalogue.
+- **NZ vs UK, combined:** OR **0.66** [0.52, 0.84] — **NZ lower** on the combined measure, because the UK service boom lifts the UK numerator.
+
+**M2 unknown-break tests:**
+
+- NZ AP break **2007**: F = 22.8, bootstrap p = **0.001**.
+- NZ combined break **2007**: F = 23.0, p = **0.001**.
+- UK AP break **2001**, combined **2007**; US LoC AP **2003**, combined **2004**; France AP **2009** p = 0.11, combined **2014** p = 0.025; Québec **none** (p > 0.3).
+
+But these p-values use an **iid residual bootstrap**, which ignores serial correlation, so they are likely **too small**. A break year coinciding with Amazon/POD is **suggestive, not causal**.
+
+**M3 NZ–UK interrupted time series on the log-odds gap:**
+
+- AP at B = 2007: slope change −0.015, p = 0.57 — no clean break.
+- B = 2008: −0.037, p = 0.09.
+- B = 2009: −0.073, p = 0.002 — but this is a different break year and the combined series shows the opposite sign.
+- So **no clean break in the NZ–UK gap**; NZ’s jump is partly shared by the UK.
+
+**Interpretation:** NZ’s AP share clearly rises and breaks around 2007; free ISBNs + POD fit that. But the UK comparison is weak, and once trends are allowed the AP NZ-vs-UK effect is not significant. The combined measure reverses. This is **consistent with** the free-ISBN story, not proof of it.
+
+---
+
+## 4. France vs Québec results
+
+### What the figure/table shows
+`fr_qc_shares.png` is the combined share.
+
+- **France:** ~6.2% in 2010, rises to ~14.9% in 2015, dips to ~8.9% in 2017, rises to ~15.5% in 2020, ~14.0% in 2021. The dip/spikes are heavily driven by **Édilivre** (service imprint): its records fall from ~6,100 in 2015 to 875 in 2017, then rise to 4,272 in 2018. So **do not read 2014–2018 France levels as a real trend**; the author=publisher series is steadier.
+- **Québec:** ~3.8% in 2010 → ~9.6% in 2021; no big service spike; smoother.
+
+Pre-2019 both were free. France rose faster than Québec **even though both were free**, which undermines a simple fee story before 2019. After France began charging in March 2019, France’s combined share was roughly flat (13.4→14.0%) while Québec rose (7.1→9.6%) — direction the fee hypothesis predicts, but only three post-fee years, one noisy break (Édilivre), and a Québec 2021 jump.
+
+### Econometric results
+**M4 France vs Québec:**
+
+- Unit: year-level log-odds gap \(d_t = \text{logit}(p_{FR,t}) - \text{logit}(p_{QC,t})\), 2010–2021.
+- **AP pre-trend 2010–2018:** slope **+0.021/yr**, Newey-West SE 0.005, p_NW = **0.004**, permutation p = **0.083**. So there is small but nonzero convergence; permutation evidence is marginal.
+- Residual SD around trend: **0.083** — yearly noise ~8% in odds.
+- Year-to-year changes not correlated (r = −0.10): parallel in trend, not in shocks.
+- **Combined share:** gap slope **0.006/yr**, p = **0.86** — noisy, dominated by Édilivre.
+- **Post-2019 AP deviations from extrapolated pre-trend:** 2019 +0.054, 2020 +0.422, 2021 +0.054; mean **+0.177 = 2.1 pre-residual SDs**.
+- Piecewise regression: level shift p = **0.08**; slope change p = **0.9996**.
+- So: **no sustained break**; at most a weak level shift, driven by 2020 (COVID year), and not a slope change.
+
+**Interpretation:** France vs Québec does **not** provide a clean test of the 2019 fee. Pre-2019 both were free; post-2019 is three noisy years; the fee was small/unverified. The AP series is parallel-ish before 2019; the combined series is dominated by one service publisher. So the result is **null with qualification**, not support for a strong fee effect.
+
+---
+
+## 5. Sensitivity results
+
+`sensitivity.png` and C3 are important.
+
+**UK/NZ:**
+- Across AP variants, **NZ stays above UK** in every variant: pooled NZ ~**7.1–8.4%**, UK ~**0.8–1.9%**.
+- If initial-only matches are dropped, NZ falls to **2.8%**, but still above UK.
+- **Services-only** is near zero in NZ (~0.04%) and Québec (~0.2%), and ~0.8% in the UK. So the UK combined measure is service-sensitive; NZ is AP-driven.
+- The **combined** UK-vs-NZ result reverses because of the UK service boom.
+
+**France/Québec:**
+- France pooled combined ~**11.6%**, but author=publisher-only France ~**3.8%**, **below** Québec’s ~**5.8%**.
+- So “France is higher than Québec” is a **services effect** (Édilivre, BoD), not a name-matching/AP effect.
+- Québec is stable across variants ~4.9–6.6%; France swings 3.8–13.3% depending on definition.
+
+**Interpretation:** The NZ-above-UK AP gap is robust. The France-above-Québec combined gap is **not** a robust AP result; it depends on service imprints.
+
+---
+
+## 6. US / Amazon results
+
+### Data caveats
+- **US LoC:** MDSConnect BooksAll 2016, 7.1M print ISBNs 1995–2016 after filters; selected catalogue, not all US publishing; 2012+ cataloguing lag; window 1995–2011.
+- **Amazon:** Amazon Reviews 2023 Books metadata, 4.45M products, 2.71M print ISBNs; marketplace/reviews-biased, global, US-centered by assumption. Not a national sample.
+- **Bowker:** only two published points: self-published = **11% of US ISBNs in 2007**, **40% in 2012**. No series, no correlation/lag.
+
+### Amazon timeline
+`amazon_timeline.png` left panel:
+- CreateSpace / “Independently published” print records rise from ~933 in 2007 to ~67,592 in 2021.
+- 979-8 ISBNs appear around 2020: 50,712 in 2020, 68,038 in 2021.
+- Combined Amazon sample self-published share: **2.8% in 2000 → 49.9% in 2021**.
+
+But national bibliographies show only **35–57 Amazon-issued ISBNs per year** vs ~24,000 on Amazon. So in paid-ISBN countries, the Amazon-era boom sits **outside national bibliographies**. That means national ISBN shares measure **agency/catalogue use**, not total self-publishing.
+
+### Amazon vs Bowker
+`amazon_vs_bowker.png`:
+- Amazon sample combined share at 2007 is **6.2%** vs Bowker **11%**; at 2012 **23.7%** vs Bowker **40%**.
+- Shape is similar, level lower, expected for a reviews-biased marketplace sample. But with only two Bowker points, this is **not validation**; no correlation or lag can be computed.
+
+### US LoC AP series
+US LoC AP share is tiny and flat: ~0.25–0.4% through 2011. So the US national catalogue does not show the Amazon boom in AP terms either.
+
+---
+
+## 7. Per-capita results
+
+C11 shows AP per million people:
+- **NZ:** roughly **90–110 per million** in the 2010s.
+- **UK:** roughly **~10 per million**.
+- **US LoC:** roughly **~1 per million**.
+- **France/Québec:** intermediate; France rises from ~20 to ~75 per million; Québec ~40–70.
+
+So NZ is about **10× the UK** and **~100× the US LoC** per capita. But the population series is **rounded approximations from memory, linearly interpolated**; the PDF says replace with official figures before publishing per-capita numbers. Do not publish these as final.
+
+---
+
+## 8. Validation and BnF benchmark
+
+**BnF benchmark (C13):**
+- Our France AP share correlates **r = 0.96** with BnF’s official author-depositor share, at about **two-thirds the level**.
+- Combined share correlates **r = 0.65**.
+- This supports the France AP measure as tracking the official series, though levels differ.
+
+**Validation (C14):**
+- 25 flagged + 25 unflagged per source, record-only, no web lookups.
+- Flagged: no clear false positives; ~5 borderline sole-trademark/company imprints.
+- Unflagged: UK/FR essentially all real publishers; NZ/QC had a few likely misses (pseudonyms, small imprints).
+- Rough recall guess: NZ ~80–90%, others higher.
+- This is **not** a precision/recall estimate; gold labels are blank; needs independent human review.
+
+**NZ ISBN pool check:** flag rate inside 978-0-473/978-1-06 pool 27–38%, outside 2–7%; pool is 13% of NZ print ISBNs in 2005 rising to 50–57% in 2020–21. High overlap but far from complete.
+
+---
+
+## 9. What holds up, what doesn’t
+
+### Holds up
+1. **NZ AP share broke upward around 2007** (p = 0.001 in break test), coincident with Amazon/POD era. NZ per-capita AP rate is ~10× UK and ~100× US LoC. Free local ISBNs + POD tools fit this. Cataloguing/selection differences could account for part of the level gap.
+2. **Paid-ISBN countries’ Amazon boom is mostly outside national bibliographies.** National records show 35–57 Amazon-issued ISBNs/year vs ~24,000 on Amazon. This is a strong measurement point.
+3. **France AP tracks BnF official series** (r = 0.96), though lower level.
+
+### Weak / null
+4. **France vs Québec:** parallel-ish before 2019 on AP; no sustained break after 2019 fee; fee small/unverified; 2020 COVID; Édilivre dominates combined. Null with qualification.
+5. **NZ vs UK AP:** OR 1.79 without trends, but OR 1.29 p = 0.27 with trends. Not robust to pre-trends.
+6. **Combined UK vs NZ:** reverses sign (OR 0.66) because UK services boom. Does not hold.
+
+### Not done / not available
+- Bowker underlying series, Amazon-vs-Bowker correlation/lag.
+- Official population series.
+- Independent hand validation with gold labels.
+- UK price history, BNB selection policy, Québec free-ISBN start date, 2019 AFNIL tariff.
+
+---
+
+## 10. What Part B can and cannot claim
+
+**Can claim:**
+- NZ AP share had an upward structural break around 2007, coincident with the Amazon/POD era.
+- NZ AP share is higher than comparators in some specifications, especially vs US LoC.
+- In paid-ISBN countries, the Amazon-era self-pub boom is largely outside national bibliographies.
+- France/Québec show no sustained post-2019 break in AP.
+
+**Cannot claim:**
+- That free ISBNs **caused** the NZ rise. No price change, one/two control units, pre-trends fail, break timing coincides with other shocks.
+- That Amazon **caused** the national break. Timing is suggestive only.
+- That France’s 2019 fee caused flatness. Weak dose, unverified amount, three post years, COVID, Édilivre.
+- That Amazon vs Bowker validates the measure. Two points only.
+- That levels are comparable across countries. Cataloguing/selection differ.
+
+---
+
+## 11. Specific issues/inconsistencies to fix before publishing
+
+1. **AP is not Amazon Publishing.** State this prominently near every AP figure.
+2. **UK 1995 share typo:** `FIGURE_DATA` says 0.0687 but Wilson CI [0.0079, 0.0094] and C1 say ~0.0087. Fix to **0.0087**.
+3. **NZ 2010 share typo:** `FIGURE_DATA` says 0.0980; C1 says 0.0860, but 393/4010 = 0.0980. C1 share column is wrong; use **0.0980**.
+4. **C10 table is garbled:** it repeats `post_dev_2019...post_dev_2122` and cuts off. Only 2019–2021 post deviations are real; clean this table.
+5. **AFNIL fee inconsistency:** page 3 says 2025 tariff **€637** dossier fee; page 4 says 2019 fee **€37**; 2019 amount unverified. Resolve before any fee-dose claim.
+6. **Bowker is not validation.** Label it “plausibility check on shape/level,” not validation.
+7. **Per-capita population is rounded from memory.** Do not publish per-capita until official figures are used.
+8. **UK post-2011 service drop is a place effect.** Report UK AP as the steadier series and UK combined as a lower bound.
+9. **France 2014–2018 combined levels are Édilivre-driven.** Do not read as real trend.
+10. **Wilson CIs reflect sampling only**, not classification/coverage error. Say so in figure notes.
+
+---
+
+## One-paragraph summary you can use
+
+The bundle shows a large, smooth rise in New Zealand’s **author=publisher** share with a 2007 break, consistent with free national ISBNs plus POD/Amazon-era tools, but the UK comparison is weak and the combined measure reverses because UK service imprints spike and then move their stated place to the US. France and Québec cannot test the ISBN-fee hypothesis before 2019 because both were free; after France’s 2019 fee there is no sustained AP break, and the combined series is dominated by Édilivre. The US/Amazon evidence shows a huge marketplace self-publishing boom that national bibliographies largely miss, so national ISBN shares measure agency/catalogue use, not total self-publishing. The “Amazon vs Bowker” figure is only two Bowker points and is not validation. The strongest claims are descriptive/event-timing and measurement-based; the causal claims are limited, and several specifications fail once trends or alternative definitions are allowed.
+
+////
+////
+////////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////////
+////////
+# ELI5: What this whole study found
+
+## First, the basic setup
+
+Imagine there are **two ways** to get a book registered so it can be sold in shops:
+
+- **The official government way** — you pay money (like a license fee) and get an official number for your book. That number is called an **ISBN**.
+- **The free/cheap way** — some countries give you that number for free. And Amazon gives you one for free too if you publish through them.
+
+The researchers wanted to know: **when ISBNs are free, do more people self-publish?**
+
+That's it. That's the whole question.
+
+## What they actually measured
+
+They looked at big library lists of books from five places — **UK, New Zealand, France, Québec, and the US** — and tried to spot which books were self-published.
+
+How? Mostly by looking for clues like:
+- The author's name is also listed as the publisher (like "Published by John Smith" when John Smith wrote it)
+- The publisher is a known self-publishing company (like AuthorHouse or Lulu)
+
+Then they counted: **out of all the books in the library list that year, what fraction looked self-published?**
+
+## The big finding: New Zealand
+
+**New Zealand gives out ISBNs for free. The UK charges for them.**
+
+And look what happened:
+
+- In **New Zealand**, the self-publishing share exploded — from about 3% in the 1990s to over 13% by 2013.
+- In the **UK**, it stayed tiny — around 1%.
+
+New Zealand's self-publishing rate per person ended up roughly **10 times higher** than the UK's.
+
+And the timing? New Zealand's numbers suddenly jumped around **2007** — which is right when Amazon's print-on-demand tools got popular.
+
+**So: free ISBNs + easy printing = way more self-publishing.** That fits the story.
+
+## But here's the catch (important!)
+
+The UK comparison is **messy**, because:
+
+- A lot of the UK's "self-publishing" was actually big companies like AuthorHouse.
+- Around 2011–2012, those companies **moved their address** from the UK to Indiana, USA.
+- So their books suddenly stopped counting as "UK" books — even though UK authors were still using them.
+- That makes the UK numbers look like they **dropped**, when really it was just a paperwork/address thing.
+
+And when the researchers tried to be more careful with the statistics (controlling for the fact that the two countries were already trending differently before 2007), **the New Zealand vs UK difference got weaker** — not significant anymore.
+
+So the New Zealand story is **suggestive, not proven**.
+
+## France vs Québec: the test that didn't work
+
+The idea was: **France started charging for ISBNs in 2019, Québec stayed free. So France's self-publishing should drop, and Québec's should keep rising.**
+
+But there's a problem:
+
+**Before 2019, France's ISBNs were ALSO free.**
+
+So for most of the study period, they were comparing **two free countries**. That can't test whether fees matter.
+
+After 2019? France's share stayed roughly flat while Québec's rose a bit. That's the **direction** the theory predicts — but:
+
+- Only 3 years of data
+- One big French publisher (Édilivre) kept messing up the numbers
+- 2020 was COVID, which messed everything up
+- The fee was small
+
+**Verdict: we can't tell if the fee did anything.** The result is basically "no clear answer."
+
+## The Amazon finding (this one is solid)
+
+Here's something important and a little surprising:
+
+**In countries that charge for ISBNs (like the US and UK), the giant Amazon self-publishing boom is mostly INVISIBLE in the official library lists.**
+
+Why? Because when you self-publish on Amazon, Amazon gives you a **free ISBN**. You don't need the official one. So the official library lists only see a tiny fraction of what's actually being published.
+
+The numbers are wild:
+- Amazon shows about **24,000** self-published books per year in the UK
+- The UK's official library list shows only about **35–57**
+
+So: **the official lists are measuring "who bothered to use the official system," not "how many people are self-publishing."**
+
+That's a big deal. It means a lot of these numbers are measuring the wrong thing.
+
+## The "Amazon vs Bowker" chart — what it actually is
+
+Bowker is the US company that sells official ISBNs. The researchers found **two** published numbers from Bowker:
+
+- 2007: 11% of US ISBNs were self-published
+- 2012: 40%
+
+That's it. **Two data points.**
+
+They plotted those two dots next to their Amazon data and said "yeah, looks about right."
+
+That's **not** a validation. That's just "the shape looks similar." With two dots you can't check much of anything.
+
+## The tiny-print summary
+
+| Question | Answer |
+|---|---|
+| Do free ISBNs lead to more self-publishing? | **Maybe.** New Zealand looks like yes, but the comparison is messy and the statistics get weak when you're careful. |
+| Did France's 2019 fee change anything? | **Can't tell.** Too short, too noisy, fee too small. |
+| Does the official book list show the real self-publishing boom? | **No.** Especially in countries that charge for ISBNs — the boom happens on Amazon and doesn't show up. |
+| Is Amazon vs Bowker a real check? | **No.** It's two dots. |
+
+## The one-sentence version
+
+> **Free ISBNs might encourage self-publishing (New Zealand hints at it), but the official book-counting lists mostly miss the Amazon self-publishing boom, so none of the numbers mean quite what they look like — and the France/Québec test didn't really work because France's ISBNs used to be free too.**
+
+## What they should fix before publishing
+
+1. There are some **typos in the tables** (a couple of UK and NZ numbers don't match across pages).
+2. The **France/Québec post-2019 table is garbled** in the PDF — it repeats years 2019–2122 like a glitch.
+3. The **population numbers are "from memory"** — they literally wrote that in the document. Don't trust the per-person numbers until they use real population data.
+4. The fee amounts **don't match** between pages (€637 vs €37).
+5. They should stop calling the two-dot Bowker thing "validation."
+
+That's the whole thing, without the statistics.

@@ -1,0 +1,5 @@
+name_pattern,country_language,tier,evidence_url,scope,start_year,end_year,notes,sources,evidence_status
+\bbooks on demand\b,international/German,platform,https://bod.se/bodfiles/SE-Storage/documents/Press-documents/Stark_tillvaext_i_foerfattar-_och_foerlagsverksamheten.pdf,main,1997,9999,BoD (Norderstedt) author-publishing platform; Nordic press release says platform for authors who bear publication themselves,,documented
+\bkolofon\b,Norwegian,author_services,https://21st.ai/en/companies/525619/no/oslo/publishing-activities/org-number-888485112-kolofon-forlag-as/summary,main,1999,9999,"Kolofon Forlag AS, self-described as Norway largest self-publishing services company, est. 1999 (aggregator profile; no terms page read)",,documented_weak
+\bidealbooks\b,Norwegian,author_services,,mixed,0,9999,Candidate self-publishing service; no evidence read; sensitivity only,,candidate_no_evidence
+\bbokselskap\b|\bsaxo publish\b|\bselfpublish,Norwegian,author_services,,mixed,0,9999,Candidates; no evidence read; sensitivity only,,candidate_no_evidence

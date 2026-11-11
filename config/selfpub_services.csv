@@ -1,0 +1,62 @@
+name_pattern,country_language,tier,evidence_url,scope,start_year,end_year,notes,sources
+\bcreate\s*space\b,international,platform,https://press.aboutamazon.com/2007/8/createspace-an-amazon-business-launches-books-on-demand-self-publishing-service-for-authors,main,2007,2018,Imprint match only,
+\bindependently published\b|\bpublication independante\b,international,platform,https://kdp.amazon.com/en_US/help/topic/G201834170,main,0,9999,Do not match Amazon traditional imprints,
+\bbooksurge\b,international,author_services,https://press.aboutamazon.com/2005/4/amazon-com-acquires-booksurge-llc,main,0,9999,Publisher imprint only; not manufacturer,
+\blulu\b,international,platform,https://www.lulu.com/,main,0,9999,Standalone name boundary,
+\bauthor\s*house\b,English,author_services,https://www.authorhouse.com/en,main,0,9999,Assisted self publishing,
+\bxlibris\b,English,author_services,https://www.xlibris.com/en,main,0,9999,Assisted self publishing,
+\biuniverse\b,English,author_services,https://www.iuniverse.com/en,main,0,9999,Publishing packages,
+\btrafford\b,English,author_services,https://www.trafford.com/en,main,0,9999,Assisted self publishing,
+\bmatador\b,English,author_services,https://www.selfpublishingadvice.org/wp-content/uploads/2015/10/ALLI-Partner-Directory-2015-SCREEN-SPREADS-1.pdf,main,1999,2023,2015 publisher statement: Matador self-publishing imprint since 1999,
+\btroubador publishing\b,English,author_services,https://troubador.co.uk/our-story,mixed,1996,9999,Parent also historically academic publisher; Matador imprint specific in main; parent name sensitivity only,
+\bgrosvenor house\b,English,author_services,https://www.grosvenorhousepublishing.co.uk/,main,0,9999,Self publishing packages,
+\bnew generation publishing\b,English,author_services,https://www.newgeneration-publishing.com/,main,0,9999,Self publishing service,
+\bfeed\s*a\s*read\b,English,platform,https://www.feedaread.com/,main,2012,9999,Platform,
+\byoucaxton\b,English,author_services,https://www.youcaxton.co.uk/,main,0,9999,Author directed services,
+\bsilver\s*wood\b,English,author_services,https://www.silverwoodbooks.co.uk/,main,0,9999,Professional self publishing,
+\bcopy\s*press\b,NZ,author_services,https://www.copypress.co.nz/,main,0,9999,Publisher imprint only; printer fields ignored,
+\bmary egan\b,NZ,author_services,https://www.maryegan.co.nz/books/self-publishing-new-zealand,main,2010,9999,Author financed independent publishing,
+\bbookprint\b,NZ,author_services,https://bookprint.co.nz/book-types/self-publishing/,main,0,9999,Publisher imprint only; printer fields ignored,
+\bbooks on demand\b|^bod\b,French,platform,https://www.bod.fr/,main,0,9999,Publisher imprint,
+\bedilivre\b,French,author_services,https://www.edilivre.com/,main,0,9999,Alternative publishing service,
+\blibrinova\b,French,author_services,https://www.librinova.com/,main,0,9999,Self publishing and representation,
+\bthe\s*book\s*edition\b,French,platform,https://www.thebookedition.com/fr/,main,0,9999,Self publishing platform,
+\bbook guild\b,English,author_services,https://www.bookguild.co.uk/,mixed,0,9999,Mixed traditional and author cofunded contracts; sensitivity only,
+\b(?:editions?|ed) du net\b,French,platform,https://www.bnf.fr/sites/default/files/2022-09/BnF_Observatoire%20DL_2014_synthese_0.pdf,main,0,9999,BnF identifies self publishing / author pays imprints; historical business model extrapolation,fr;qc
+\bpublibook\b,French,author_services,https://www.bnf.fr/sites/default/files/2022-09/BnF_Observatoire%20DL_2014_synthese_0.pdf,main,0,9999,BnF identifies self publishing / author pays imprints; historical business model extrapolation,fr;qc
+\bsociete des ecrivains\b,French,author_services,https://www.bnf.fr/sites/default/files/2022-09/BnF_Observatoire%20DL_2014_synthese_0.pdf,main,0,9999,BnF identifies self publishing / author pays imprints; historical business model extrapolation,fr;qc
+\bamalth[ée]e\b,French,vanity,https://www.bnf.fr/sites/default/files/2022-09/BnF_Observatoire%20DL_2014_synthese_0.pdf,main,0,9999,BnF identifies self publishing / author pays imprints; historical business model extrapolation,fr;qc
+\b(?:editions?|ed)\s+persee\b|^persee$,French,vanity,https://www.bnf.fr/sites/default/files/2022-09/BnF_Observatoire%20DL_2014_synthese_0.pdf,main,0,9999,BnF identifies self publishing / author pays imprints; historical business model extrapolation,fr;qc
+\b(?:editions?|ed)\s+baudelaire\b|^baudelaire$,French,vanity,https://www.bnf.fr/sites/default/files/2022-09/BnF_Observatoire%20DL_2014_synthese_0.pdf,main,0,9999,BnF identifies self publishing / author pays imprints; historical business model extrapolation,fr;qc
+\b(?:editions?|ed)\s+(?:du\s+)?pantheon\b,French,vanity,https://www.bnf.fr/sites/default/files/2022-09/BnF_Observatoire%20DL_2014_synthese_0.pdf,main,0,9999,BnF identifies self publishing / author pays imprints; historical business model extrapolation,fr;qc
+\bauthors? on\s*line\b,English/international,author_services,https://www.selfpublishingadvice.org/wp-content/uploads/2015/10/ALLI-Partner-Directory-2015-SCREEN-SPREADS-1.pdf,main,1997,9999,Publisher-supplied 2015 ALLi directory pp46–49; historic model extrapolation,
+\bcompletely\s*novel\b,English/international,platform,https://www.selfpublishingadvice.org/wp-content/uploads/2015/10/ALLI-Partner-Directory-2015-SCREEN-SPREADS-1.pdf,main,0,9999,Publisher-supplied 2015 ALLi directory pp46–49; historic model extrapolation,
+\bmereo\b,English/international,author_services,https://www.selfpublishingadvice.org/wp-content/uploads/2015/10/ALLI-Partner-Directory-2015-SCREEN-SPREADS-1.pdf,main,0,9999,Publisher-supplied 2015 ALLi directory pp46–49; historic model extrapolation,
+\byork publishing services\b,English/international,author_services,https://www.selfpublishingadvice.org/wp-content/uploads/2015/10/ALLI-Partner-Directory-2015-SCREEN-SPREADS-1.pdf,main,0,9999,Publisher-supplied 2015 ALLi directory pp46–49; historic model extrapolation,
+\brethink press\b,English/international,author_services,https://www.selfpublishingadvice.org/wp-content/uploads/2015/10/ALLI-Partner-Directory-2015-SCREEN-SPREADS-1.pdf,main,0,9999,Publisher-supplied 2015 ALLi directory pp46–49; historic model extrapolation,
+\bheddon\b,English/international,author_services,https://www.selfpublishingadvice.org/wp-content/uploads/2015/10/ALLI-Partner-Directory-2015-SCREEN-SPREADS-1.pdf,main,2012,9999,Publisher-supplied 2015 ALLi directory pp46–49; historic model extrapolation,
+\bblurb\b,English/international,platform,https://www.selfpublishingadvice.org/wp-content/uploads/2015/10/ALLI-Partner-Directory-2015-SCREEN-SPREADS-1.pdf,main,0,9999,Publisher-supplied 2015 ALLi directory pp46–49; historic model extrapolation,
+\bepubli\b,English/international,platform,https://www.selfpublishingadvice.org/wp-content/uploads/2015/10/ALLI-Partner-Directory-2015-SCREEN-SPREADS-1.pdf,main,2008,9999,Publisher-supplied 2015 ALLi directory pp46–49; historic model extrapolation,
+\bupfront publishing\b,English,author_services,https://printondemand-worldwide.com/services/bookpublisher-old/,main,0,9999,Successor offers Upfront self-publishing guide,uk;nz
+\baustin macauley\b,mixed,author_services,https://www.austinmacauley.com/how-we-work,mixed,0,9999,Standard and author-contribution contracts,uk;nz
+\bolympia (?:publishers|publishing)\b,mixed,author_services,https://olympiapublishers.com/submissions,mixed,0,9999,Traditional and author-contribution contracts,uk;nz
+\bpegasus elliot mac\s*kenzie\b,mixed,author_services,https://writersguild.org.uk/wp-content/uploads/2024/04/is-it-a-steal-an-investigation-into-hybridpaid-for-publishing-services.pdf,mixed,0,9999,"Writers Guild research; specific company only, not all Pegasus imprints",uk;nz
+\bapotheose\b,mixed,author_services,https://www.journaldechambly.com/culture/publier-ses-livres-sans-lentremise-dune-maison-dedition/,mixed,0,9999,Author interview confirms payments for five titles; all contracts not established; sensitivity only,qc
+\boutskirts press\b,english-us,author_services,https://en.wikipedia.org/wiki/Outskirts_Press,main,0,9999,US imprint added for LoC/Amazon comparison; URL not fetched,us
+\bbookbaby\b,english-us,platform,https://en.wikipedia.org/wiki/BookBaby,main,0,9999,US imprint added for LoC/Amazon comparison; URL not fetched,us
+\bpage publishing\b,english-us,author_services,https://en.wikipedia.org/wiki/Page_Publishing,main,0,9999,US imprint added for LoC/Amazon comparison; URL not fetched,us
+\bxulon press\b,english-us,vanity,https://en.wikipedia.org/wiki/Xulon_Press,main,0,9999,US imprint added for LoC/Amazon comparison; URL not fetched,us
+\bwest\s*bow\b,english-us,author_services,https://en.wikipedia.org/wiki/WestBow_Press,main,0,9999,US imprint added for LoC/Amazon comparison; URL not fetched,us
+\btate publishing\b,english-us,vanity,https://en.wikipedia.org/wiki/Tate_Publishing_%26_Enterprises,main,0,9999,US imprint added for LoC/Amazon comparison; URL not fetched,us
+\bdorrance\b,english-us,vanity,https://en.wikipedia.org/wiki/Dorrance_Publishing,main,0,9999,US imprint added for LoC/Amazon comparison; URL not fetched,us
+\bbalboa press\b,english-us,author_services,https://en.wikipedia.org/wiki/Balboa_Press,main,0,9999,US imprint added for LoC/Amazon comparison; URL not fetched,us
+\barchway publishing\b,english-us,author_services,https://en.wikipedia.org/wiki/Archway_Publishing,main,0,9999,US imprint added for LoC/Amazon comparison; URL not fetched,us
+\bwheatmark\b,english-us,author_services,https://en.wikipedia.org/wiki/Wheatmark,main,0,9999,US imprint added for LoC/Amazon comparison; URL not fetched,us
+\bbook\s*locker\b,english-us,platform,https://en.wikipedia.org/wiki/BookLocker,main,0,9999,US imprint added for LoC/Amazon comparison; URL not fetched,us
+\bpublish\s*america\b,english-us,vanity,https://en.wikipedia.org/wiki/PublishAmerica,main,0,9999,US imprint added for LoC/Amazon comparison; URL not fetched,us
+\b1st books\b|\bfirst books library\b,english-us,author_services,https://en.wikipedia.org/wiki/1stBooks,main,0,9999,US imprint added for LoC/Amazon comparison; URL not fetched,us
+\binfinity publishing\b,english-us,author_services,https://en.wikipedia.org/wiki/Infinity_Publishing,main,0,9999,US imprint added for LoC/Amazon comparison; URL not fetched,us
+\bauthor solutions\b,english-us,author_services,https://en.wikipedia.org/wiki/Author_Solutions,main,0,9999,US imprint added for LoC/Amazon comparison; URL not fetched,us
+\bsmashwords\b,english-us,platform,https://en.wikipedia.org/wiki/Smashwords,main,0,9999,US imprint added for LoC/Amazon comparison; URL not fetched,us
+\bwingspan press\b,english-us,author_services,https://en.wikipedia.org/wiki/Wingspan_Press,main,0,9999,US imprint added for LoC/Amazon comparison; URL not fetched,us
+\bwestbow\b,english-us,author_services,https://en.wikipedia.org/wiki/WestBow_Press,main,0,9999,US imprint added for LoC/Amazon comparison; URL not fetched,us

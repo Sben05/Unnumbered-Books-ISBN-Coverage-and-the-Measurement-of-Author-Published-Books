@@ -1,0 +1,6 @@
+name_pattern,country_language,tier,evidence_url,scope,start_year,end_year,notes,evidence_status
+\blulu\b,international,platform,https://www.lulu.com/,main,0,9999,Standalone name,documented
+\bcreate ?space\b,international,platform,https://press.aboutamazon.com/2007/8/createspace-an-amazon-business-launches-books-on-demand-self-publishing-service-for-authors,main,0,9999,Amazon CreateSpace,documented
+\bindependently published\b,international,platform,https://kdp.amazon.com/en_US/help/topic/G201834170,main,0,9999,Amazon KDP default imprint,documented
+\bezerrozes gramatas\b,Latvian,author_services,https://www.literatura.lv/en/works/1928080,mixed,0,9999,Imprint appears in catalogue records both alone and as 'EZERROZES gramatas; <author> pasizdevums' (co-credit with the author's own self-publication statement); no source describing its business model,candidate_no_evidence
+\bsava gramata\b,Latvian,author_services,https://landingpage.zl.lv/sava-gramata-sia,mixed,0,9999,Cesis publisher; appears as 'Author; Sava gramata' in some records; no source on whether authors pay,candidate_no_evidence

@@ -1,0 +1,7 @@
+name_pattern,country_language,tier,evidence_url,scope,start_year,end_year,notes,evidence_status
+\bridero\b,Czech,platform,https://spidersweb.pl/2017/02/ridero-opinie.html,main,2015,9999,Ridero self-publishing platform (Czech edition); only the Polish edition is documented in a source I read,documented_weak
+\bpointa\b,Czech,platform,https://www.lupa.cz/clanky/veronika-mahdalova-pointa-lide-si-plni-sve-sny-a-vydavaji-vlastni-knizky/,mixed,2012,9999,Albatros Media crowdfunding/self-publishing hybrid (Lupa.cz interview); start year assumed; sensitivity only,documented_weak
+\btribun eu\b,Czech,author_services,,mixed,0,9999,Brno house known to publish author-paid titles; no source read -> sensitivity only,candidate_no_evidence
+\blulu\b,international,platform,https://www.lulu.com/,main,0,9999,Standalone name,documented
+\bcreate ?space\b,international,platform,https://press.aboutamazon.com/2007/8/createspace-an-amazon-business-launches-books-on-demand-self-publishing-service-for-authors,main,0,9999,Amazon CreateSpace,documented
+\bindependently published\b,international,platform,https://kdp.amazon.com/en_US/help/topic/G201834170,main,0,9999,Amazon KDP default imprint,documented

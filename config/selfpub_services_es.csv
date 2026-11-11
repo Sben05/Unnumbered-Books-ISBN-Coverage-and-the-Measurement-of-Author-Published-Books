@@ -1,0 +1,16 @@
+name_pattern,country_language,tier,evidence_url,scope,start_year,end_year,notes,evidence_status
+\bbubok\b,Spanish,platform,https://www.consumer.es/tecnologia/internet/prueba-practica-tres-plataformas-de-autoedicion-de-libros.html,main,0,9999,Self-publishing platform (Consumer; Genbeta),documented
+\blulu\b,international,platform,https://www.lulu.com/,main,0,9999,Standalone name,documented
+\bcreate\s*space\b,international,platform,https://www.escritores.org/recursos-para-escritores/recursos-2/articulos-de-interes/20271-circulo-rojo-bubok-libroscom-esta-es-la-letra-pequena-que-firman-sus-autores-,main,0,9999,Amazon CreateSpace listed as pay-to-self-publish (escritores.org 2017-04),documented
+\bindependently published\b|^independently$,international,platform,https://kdp.amazon.com/en_US/help/topic/G201834170,main,0,9999,Amazon KDP default imprint,documented
+\bc[ií]rculo rojo\b,Spanish,author_services,https://www.escritores.org/recursos-para-escritores/recursos-2/articulos-de-interes/20271-circulo-rojo-bubok-libroscom-esta-es-la-letra-pequena-que-firman-sus-autores-,main,0,9999,Author-pays model (escritores.org 2017-04); self-description as autoedicion leader,documented
+\bletrame\b,Spanish,author_services,https://www.merca2.es/2021/07/26/las-mejores-editoriales-de-autoedicion-de-libros-702462/,main,0,9999,Listed as autoedicion company (merca2 2021; promotional),documented_weak
+\blibros\.com\b,Spanish,author_services,https://www.escritores.org/recursos-para-escritores/recursos-2/articulos-de-interes/20271-circulo-rojo-bubok-libroscom-esta-es-la-letra-pequena-que-firman-sus-autores-,main,0,9999,Author-pays model (escritores.org 2017-04); excludes Olelibros.com,documented
+\bletra min[uú]scula\b,Spanish,author_services,https://www.merca2.es/2021/07/26/las-mejores-editoriales-de-autoedicion-de-libros-702462/,main,0,9999,Listed as autoedicion company (merca2 2021),documented_weak
+\buniverso de letras\b,Spanish,author_services,https://www.merca2.es/2021/07/26/las-mejores-editoriales-de-autoedicion-de-libros-702462/,main,0,9999,Listed as autoedicion company (merca2 2021),documented_weak
+\bletras de autor\b,Spanish,platform,https://www.lecturalia.com/blog/2015/03/17/letras-de-autor-consolidando-al-autor-independiente,main,0,9999,Only the article title was seen ('consolidando al autor independiente'); content not read,title_only
+\bcaligrama\b,Spanish,mixed,https://www.caligramaeditorial.com/hubfs/Caligrama/Gu%C3%ADa%20Publicaci%C3%B3n%20v12.pdf?hsLang=es,mixed,2014,9999,PRH autopublicacion/hybrid imprint (launched 2014 per directory); keep out of main,documented_weak
+\bex\s?libric\b,Spanish,author_services,,main,0,9999,User-listed; one catalogue page describes autoedicion + traditional; no independent evidence located,user_listed_unverified
+\bvive\s?libro\b,Spanish,author_services,,main,0,9999,User-listed; only catalogue listings found; model unverified,user_listed_unverified
+\bpunto rojo( libros)?\b,Spanish,author_services,,main,0,9999,User-listed; only unverified user reviews (Gowork) found,user_listed_unverified
+\badarve\b,Spanish,author_services,,main,0,9999,User-listed 'Editorial Adarve'; no evidence located,user_listed_unverified

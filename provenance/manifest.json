@@ -1,0 +1,102 @@
+[
+  {
+    "file": "inputs/records.csv",
+    "sha256": "4413cd91c01e4b9b12a4582662516918d3f09a5af2b8a6314cd869905019aad8",
+    "bytes": 19661283
+  },
+  {
+    "file": "provenance/APEL - ISBN 2015 - Novas regras.pdf",
+    "sha256": "73926258050bbd2fa020d22bc39315f0ec5aa2e816f32947e970b4a18c8067ee",
+    "bytes": 456184
+  },
+  {
+    "file": "provenance/APEL - ISBN 2015 - Novas regras.txt",
+    "sha256": "cdb5aad0562dffc2e455040e49b15dcb8b1414295d5256d1b23531ee9ae5c190",
+    "bytes": 3101
+  },
+  {
+    "file": "provenance/ISBN_2015_Informaco_aos_Utilizadores.pdf",
+    "sha256": "d182aa89fbc1cc9d7a1c09c1f68b5d65787e2cd1e4511edee3eceae64ba97719",
+    "bytes": 206713
+  },
+  {
+    "file": "provenance/ISBN_2015_Informaco_aos_Utilizadores.txt",
+    "sha256": "e6fbfbbbcf663fd999ba787b35f950c5efbde3f23ff8d50b2a0961b3bd623591",
+    "bytes": 3943
+  },
+  {
+    "file": "provenance/SOURCE_REVIEW.md",
+    "sha256": "879ed63b13c8478a2aa8a887aa4112f8bc2f65b6cea48018b2892ad7ea9f05f1",
+    "bytes": 3938
+  },
+  {
+    "file": "provenance/ap_consistent.py",
+    "sha256": "d33ad9b0f5826e31be2d88031a71a0c053f7ac8e803c41ad7cb3a14b9b799214",
+    "bytes": 1336
+  },
+  {
+    "file": "provenance/author_panel_summary.csv",
+    "sha256": "3d9f945809b31c0e881f4cdc13f1cfaff3394635cfe771a40fbaeb0a4db56c41",
+    "bytes": 373
+  },
+  {
+    "file": "provenance/build_2025.py",
+    "sha256": "e0e73dc4b72752dcb6c3bbd5554469fd6b1cdac7d00c94359f2441a1ae6310bc",
+    "bytes": 8737
+  },
+  {
+    "file": "provenance/build_pt.py",
+    "sha256": "2b76e0548e8c28ae3b94a4322a8c878cdcbaf0f7f039e87e2551e1e9ae1a32a7",
+    "bytes": 9387
+  },
+  {
+    "file": "provenance/classify_selfpub.py",
+    "sha256": "6a7c20f4da691a68d293492e74a056a7bd189d12290fea4e58712e593fafa954",
+    "bytes": 8232
+  },
+  {
+    "file": "provenance/did_groups.csv",
+    "sha256": "cc14aec34fd018b00b151e99ea37ce769807ae7105dab524b5bb3688479e7e91",
+    "bytes": 616
+  },
+  {
+    "file": "provenance/ml_counterfactual_gaps.csv",
+    "sha256": "f90b0a4c0376f1764c891281e91d81be9fa7640de5a0fa40f8d1f7ef5ee53bd5",
+    "bytes": 765
+  },
+  {
+    "file": "provenance/ml_validation_rmse.csv",
+    "sha256": "7979c0e3bc84ad7ff7e7fa1fa6c8ebf90f231d43b148a29c1f785f563cb6644c",
+    "bytes": 228
+  },
+  {
+    "file": "provenance/natbib_isbn_by_ap_year.csv",
+    "sha256": "43c651acb779e3d89adeb7df918461d16e386a27d5a400a8ea68455c8408bf61",
+    "bytes": 2711
+  },
+  {
+    "file": "provenance/paper_pt_natbib.py",
+    "sha256": "f04b3997d362ad54c3cb995aa487ba2d41166bea2de8b5eb25db39dddd617309",
+    "bytes": 3195
+  },
+  {
+    "file": "provenance/table1_four_sources.csv",
+    "sha256": "16e1dbb379d8128a337c07f969e8b5f81d04e02d4d5c7ba344d00abd7e9e9474",
+    "bytes": 641
+  },
+  {
+    "file": "provenance/table2_robustness.csv",
+    "sha256": "c517b4b59244fe227b9ff156b3002a2cec4701fcf9edec11168c73f579ba118a",
+    "bytes": 1085
+  },
+  {
+    "file": "provenance/xy_panelA_cerlalc.csv",
+    "sha256": "7dc999affc05cdfdeed7ef2fbe632c7b84ddf1239bf5d8a3f0eaf4daf60d64c1",
+    "bytes": 1925
+  },
+  {
+    "file": "provenance/xy_panelB_national_bibliographies.csv",
+    "sha256": "63a4dfdeffb0930ef33fd4f710cdda5a5f238547fa42e7f442e8f5cf5d29d6cd",
+    "bytes": 1285
+  }
+]

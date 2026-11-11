@@ -1,0 +1,14 @@
+\begin{table}[htbp]\centering\small
+\caption{Earlier forecasts of a different ISBN-based outcome}\label{tab:ensemble}
+\begin{tabular}{lrrr}\toprule
+Model & Validation RMSE & Weight & Post gap\\\midrule
+Five-year mean & 0.338 & 0.075 & $-0.193$\\
+Random walk & 0.324 & 0.081 & $-0.388$\\
+Five-year linear trend & 0.295 & 0.098 & $-0.540$\\
+Seven-year linear trend & 0.227 & 0.165 & $-0.706$\\
+All-history linear trend & 0.216 & 0.183 & $-0.454$\\
+Donor-series ridge & 0.258 & 0.128 & $-0.570$\\
+Synthetic-control forecast & 0.178 & 0.269 & $-0.646$\\
+\bottomrule\end{tabular}
+\notes{Archived prior analysis: author-publisher share among ISBN-bearing print records. Values are rounded. RMSE and gaps are in logit units. Post gap averages 2015--18. These models do not forecast ISBN coverage among all classified author-published records.}
+\end{table}

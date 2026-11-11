@@ -1,0 +1,3 @@
+name_pattern,country_language,tier,evidence_url,scope,start_year,end_year,notes,sources,evidence_status
+\bbooks on demand\b,international,platform,,main,1997,9999,No Finnish data obtained; stub only,,unused
+\bmediapinta\b|\bpohjoinen\b|\bvaasa omakustanne\b,Finnish,author_services,,mixed,0,9999,Named by requester; unverified; no Finnish data obtained,,unused

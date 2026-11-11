@@ -1,0 +1,3 @@
+name_pattern,country_language,tier,evidence_url,scope,start_year,end_year,notes,sources,evidence_status
+\bbooks on demand\b,international,platform,,main,1997,9999,No Danish data obtained; stub only,,unused
+\bsaxo publish\b|\bmellemgaard\b,Danish,author_services,,mixed,0,9999,Candidates; unverified; no Danish data obtained,,unused

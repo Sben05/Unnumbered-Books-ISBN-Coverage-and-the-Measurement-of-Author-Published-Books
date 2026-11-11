@@ -1,0 +1,11 @@
+name_pattern,country_language,tier,evidence_url,scope,start_year,end_year,notes,evidence_status
+\bridero\b|\bempik self ?publishing\b,Polish,platform,https://spidersweb.pl/2017/02/ridero-opinie.html,main,2015,9999,Ridero PL self-publishing platform; 2017 Spider's Web interview says creating/distributing a book is free (later rebranded Empik Self-Publishing per one unverified listicle); start year 2015 is an assumption,documented_weak
+\bwydaje pl\b,Polish,platform,https://antyweb.pl/wydrukuj-swoja-ksiazke-z-wydaje-pl-nowe-opcje-w-polskim-startupie-self-publishingowym/,main,0,9999,Polish self-publishing startup described by Antyweb,documented_weak
+\bpsychoskok\b,Polish,author_services,https://www.goodreads.com/author/show/2957104.Pawe_Pollak/blog?page=7,main,0,9999,Named with Poligraf/Biale Pioro/Warszawska Firma as vanity-type houses in a Polish author's blog (blog only; no terms page read),documented_weak
+\bpoligraf\b,Polish,author_services,https://www.goodreads.com/author/show/2957104.Pawe_Pollak/blog?page=7,main,0,9999,Wydawnictwo Poligraf (Lodz) helps authors publish (company registry text) and named as vanity-type in an author's blog; also a printer so imprint may include trade work,documented_weak
+\bbiale pioro\b,Polish,author_services,https://www.goodreads.com/author/show/2957104.Pawe_Pollak/blog?page=7,main,0,9999,Same blog source; weak,documented_weak
+\bwarszawska firma wydawnicza\b|\bgrupa wydawnicza warszawska firma\b,Polish,author_services,https://www.goodreads.com/author/show/2957104.Pawe_Pollak/blog?page=7,main,0,9999,Same blog source; weak,documented_weak
+\bnovae res\b,Polish,author_services,https://fr.trustpilot.com/review/novaeres.pl,mixed,0,9999,Large debut-author-oriented house; fee model not established from a source I read -> sensitivity only,candidate_no_evidence
+\blulu\b,international,platform,https://www.lulu.com/,main,0,9999,Standalone name,documented
+\bcreate ?space\b,international,platform,https://press.aboutamazon.com/2007/8/createspace-an-amazon-business-launches-books-on-demand-self-publishing-service-for-authors,main,0,9999,Amazon CreateSpace,documented
+\bindependently published\b,international,platform,https://kdp.amazon.com/en_US/help/topic/G201834170,main,0,9999,Amazon KDP default imprint,documented

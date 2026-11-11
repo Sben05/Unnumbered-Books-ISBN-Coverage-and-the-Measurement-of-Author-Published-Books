@@ -1,0 +1,4 @@
+name_pattern,country_language,tier,evidence_url,scope,start_year,end_year,notes,evidence_status
+\blulu\b,international,platform,https://www.lulu.com/,main,0,9999,Standalone name,documented
+\bcreate ?space\b,international,platform,https://press.aboutamazon.com/2007/8/createspace-an-amazon-business-launches-books-on-demand-self-publishing-service-for-authors,main,0,9999,Amazon CreateSpace,documented
+\bindependently published\b,international,platform,https://kdp.amazon.com/en_US/help/topic/G201834170,main,0,9999,Amazon KDP default imprint,documented

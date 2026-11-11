@@ -1,0 +1,42 @@
+{
+  "input_records": 262775,
+  "input_years": "2005\u20132025; main analysis ends 2019",
+  "main_window_records": 130324,
+  "post_isbn_negative_omission_tipping_rate": 0.005149547930676237,
+  "post_isbn_negative_omission_tipping_count": 288.56521739130426,
+  "pre_cells": {
+    "ap_isbn": 941,
+    "ap_noisbn": 667,
+    "other_isbn": 57556,
+    "other_noisbn": 6596
+  },
+  "post_cells": {
+    "ap_isbn": 857,
+    "ap_noisbn": 812,
+    "other_isbn": 56037,
+    "other_noisbn": 6858
+  },
+  "headline_decomposition": {
+    "baseline": 2014,
+    "end": 2015,
+    "isbn_log_change": -0.33897536683933144,
+    "catalogue_log_change": -0.13353139262452263,
+    "coverage_log_change": -0.20544397421480884,
+    "coverage_fraction": 0.6060734623002437,
+    "baseline_rate_reference": 210.0
+  },
+  "forecast_metrics": [
+    {
+      "model": "Five-year mean",
+      "holdout": "2012\u201314",
+      "holdout_rmse_pp": 10.101672405605639,
+      "post_mean_gap_pp": -7.043975483098233
+    },
+    {
+      "model": "Linear logit trend",
+      "holdout": "2012\u201314",
+      "holdout_rmse_pp": 2.069995106742616,
+      "post_mean_gap_pp": -16.75374866829894
+    }
+  ]
+}
