@@ -32,7 +32,7 @@ def main():
     assert '??' not in text and 'n.d.b,n' not in text
     for expected in ['60.6%', '1.53%', 'BNP, n.d.-b; BNP, n.d.-c']:
         assert expected in text, expected
-    log = ROOT/'deliverables/UNNUMBERED_BOOKS.log'
+    log = ROOT/'results/build/UNNUMBERED_BOOKS.log'
     if log.exists():
         for warning in ['Overfull', 'Missing character', 'undefined citations', 'undefined references']:
             assert warning not in log.read_text(), warning

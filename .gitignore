@@ -35,4 +35,5 @@ __pycache__/
 *.synctex.gz
 /results/compiled_text.txt
 /results/environment.json
+/results/build/
 *.zip
